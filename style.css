@@ -1,0 +1,413 @@
+:root {
+  --azul-escuro: #002133;
+  --azul-claro: #0189A6;
+  --branco: #ffffff;
+  --cinza-escuro: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* MENU FIXO */
+.menu-topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+}
+
+.menu-topo nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.menu-topo nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.menu-topo nav ul li a:hover {
+  color: #0189A6; /* muda a cor do texto */
+}
+
+.menu-topo nav ul li a:hover::after {
+  width: 100%; /* ativa o sublinhado animado */
+}
+
+.logo-nome img {
+    height: 0px;
+}
+
+.logo-topo img {
+  height: 450px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: 
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('imagens/caminhao.png') no-repeat 80% center / cover;
+  position: right;
+  display: flex;
+  align-items: right;
+}
+
+/* FAIXA TRIANGULAR */
+.faixa-triangulo {
+  width: 45%;
+  height: 100%;
+  background: var(--azul-escuro);
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.texto-banner {
+  color: var(--branco);
+  max-width: 500px;
+}
+
+.texto-banner h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: var(--azul-claro);
+}
+
+.texto-banner h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.btn-banner {
+  padding: 12px 20px;
+  background: var(--azul-claro);
+  color: var(--azul-escuro);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-banner:hover {
+  background: #dfe3e4;
+}
+
+.sobre {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.container-sobre {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sobre-img {
+  position: relative;
+  flex: 1 1 500px;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.bg-img {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background: var(--azul-claro);
+  z-index: 1;
+}
+
+.conteiner-adm {
+  max-width: 1100px;
+  margin: 80px auto 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+.carla-container {
+  position: relative;
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.carla-container img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.carla-bg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 75%;
+  height: 100%;
+  background: var(--azul-claro);
+  z-index: 2;
+}
+
+.conteiner-adm .sobre-texto {
+  flex: 1 1 500px;
+}
+
+.sobre-texto {
+  flex: 1 1 500px;
+}
+
+.sobre-texto h2 {
+  font-size: 1.8rem;
+  color: var(--azul-escuro);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sobre-texto .barra {
+  width: 5px;
+  height: 40px;
+  background: var(--azul-claro);
+  display: inline-block;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Seção de Serviços */
+.servicos {
+  background-color: #e3e3e3;
+  padding: 60px 20px;
+  display: flex;
+}
+
+.container-servicos {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-servicos h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #002C3E;
+  text-align: left;
+}
+
+.barra {
+  display: inline-block;
+  width: 5px;
+  height: 30px;
+  background-color: #00A1B0;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.cards-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 30px 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .icone {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #00A1B0;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #002C3E;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+}
+
+.contato {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.container-contato {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contato-form, .contato-mapa {
+  flex: 1 1 450px;
+}
+
+.contato-form h2,
+.contato-mapa h2 {
+  font-size: 1.8rem;
+  color: var(--azul-escuro);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contato-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contato-form button {
+  background: var(--azul-claro);
+  color: var(--branco);
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato-form button:hover {
+  background: var(--azul-escuro);
+}
+
+.contato-mapa iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.rodape {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  padding: 30px 20px;
+}
+
+.container-rodape {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.rodape-logo img {
+  height: 50px;
+}
+
+.rodape-info {
+  text-align: right;
+  flex: 1;
+}
+
+.rodape-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.rodape-info a {
+  color: var(--azul-claro);
+  text-decoration: none;
+}
+
+.rodape-info a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-fixo img {
+  width: 60px;
+  height: 60px;
+}
